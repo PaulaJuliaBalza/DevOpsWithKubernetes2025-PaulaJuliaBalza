@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: todoapp
-          image: paulajuliabalza/todoapp:latest
+          image: paulajuliabalza/todoapp:1.0.0
           env:
             - name: PORT
               value: "8080"
