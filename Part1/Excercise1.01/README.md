@@ -24,17 +24,24 @@ k3d --help
 k3d cluster create -a 2 #Create cluster
 k3d cluster stop/start  #Start/Stop cluster
 kubectl config use-context k3d-k3s-default #Set Context
-kubectl apply -f deployment.yaml #Create Deployment
 
-administrator@ASC:~/Escritorio/DevOpsWithKubernetes2025-PaulaJuliaBalza/Part0/Exercise1.01$ kubectl get pods
+administrator@ASC:~/Escritorio/DevOpsWithKubernetes2025-PaulaJuliaBalza/Part1/Excercise1.01$ kubectl create deployment log-output --image=paulajuliabalza/log-output:latest
+deployment.apps/log-output created
+
+
+administrator@ASC:~/Escritorio/DevOpsWithKubernetes2025-PaulaJuliaBalza/Part1/Excercise1.01$ kubectl get pods
 NAME                         READY   STATUS    RESTARTS   AGE
-log-output-fdc46c986-stlhf   1/1     Running   0          2m44s
+log-output-fdc46c986-z57bg   1/1     Running   0          55s
 
-administrator@ASC:~/Escritorio/DevOpsWithKubernetes2025-PaulaJuliaBalza/Part0/Exercise1.01$ kubectl logs -f log-output-fdc46c986-stlhf
-2025-02-10T20:42:23.237675669Z: 546f25b8-3ab4-4406-b082-95209dbda333
-2025-02-10T20:42:28.237059428Z: 546f25b8-3ab4-4406-b082-95209dbda333
-2025-02-10T20:42:33.239227169Z: 546f25b8-3ab4-4406-b082-95209dbda333
-2025-02-10T20:42:38.238387998Z: 546f25b8-3ab4-4406-b082-95209dbda333
-2025-02-10T20:42:43.237530551Z: 546f25b8-3ab4-4406-b082-95209dbda333
-2025-02-10T20:42:48.237496212Z: 546f25b8-3ab4-4406-b082-95209dbda333
+administrator@ASC:~/Escritorio/DevOpsWithKubernetes2025-PaulaJuliaBalza/Part1/Excercise1.01$ kubectl logs -f log-output-fdc46c986-z57bg
+2025-04-07T23:30:11.041Z: 5af7594d-80a2-4888-84f8-98dace9c1895
+2025-04-07T23:30:16.046Z: 5af7594d-80a2-4888-84f8-98dace9c1895
+2025-04-07T23:30:21.048Z: 5af7594d-80a2-4888-84f8-98dace9c1895
+2025-04-07T23:30:26.052Z: 5af7594d-80a2-4888-84f8-98dace9c1895
+2025-04-07T23:30:31.058Z: 5af7594d-80a2-4888-84f8-98dace9c1895
+2025-04-07T23:30:36.061Z: 5af7594d-80a2-4888-84f8-98dace9c1895
+2025-04-07T23:30:41.064Z: 5af7594d-80a2-4888-84f8-98dace9c1895
+2025-04-07T23:30:46.065Z: 5af7594d-80a2-4888-84f8-98dace9c1895
+^Cadministrator@ASC:~/Escritorio/DevOpsWithKubernetes2025-PaulaJuliaBalza/Part1/Excercise1.01$ 
+
 ```
