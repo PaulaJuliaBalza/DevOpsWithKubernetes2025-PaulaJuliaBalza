@@ -43,5 +43,4 @@ administrator@ASC:~/Escritorio/DevOpsWithKubernetes2025-PaulaJuliaBalza/Part1/Ex
 2025-04-07T23:30:41.064Z: 5af7594d-80a2-4888-84f8-98dace9c1895
 2025-04-07T23:30:46.065Z: 5af7594d-80a2-4888-84f8-98dace9c1895
 ^Cadministrator@ASC:~/Escritorio/DevOpsWithKubernetes2025-PaulaJuliaBalza/Part1/Excercise1.01$ 
-
 ```
