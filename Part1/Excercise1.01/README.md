@@ -19,7 +19,7 @@ docker login
 docker push paulajuliabalza/log-output:latest
 
 #Deploy to k3d Kubernetes cluster 
-```
+
 k3d --help 
 k3d cluster create -a 2 #Create cluster
 k3d cluster stop/start  #Start/Stop cluster
